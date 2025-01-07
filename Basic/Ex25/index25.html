@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Check if Number is Multiple of 3 or 7</title>
+</head>
+
+<body>
+    <h1>Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7</h1>
+    <p>Viết chương trình JavaScript để kiểm tra xem một số dương cho trước có phải là bội số của 3 hay 7 không</p>
+
+
+    <script>
+
+        function mutiple(num, a, b) {
+            if (num % a === 0 && num % b === 0) return true
+            else return false;
+        }
+        console.log(mutiple(21, 3, 7))
+        console.log(mutiple(20, 3, 7))
+    </script>
+</body>
+
+</html>

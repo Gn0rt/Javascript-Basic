@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Write a JavaScript program to create another string by adding "Py" in front of a given string. If the given
+        string begins with "Py" return the original string. </p>
+    <script>
+        function check(str) {
+            if (typeof str === 'string') {
+                if (str.toLocaleLowerCase().slice(0, 2) === "py") {
+                    return str;
+                } else {
+                    return "Py" + str;
+                }
+            } else {
+                return "Invalid input. Please enter a string.";
+            }
+        }
+
+
+
+        console.log(check("asd"))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> Write a JavaScript program to check two given integers whether one is positive and another one is negative</p>
+    <script>
+        function check(x, y) {
+            if ((x > 0 && y < 0) || (x < 0 && y > 0)) {
+                return true;
+            }
+            return false;
+        }
+
+
+        console.log(check(2, 3))
+        console.log(check(-2, 3))
+        console.log(check(2, -3))
+
+    </script>
+</body>
+
+</html>

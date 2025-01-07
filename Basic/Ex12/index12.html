@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Write a JavaScript program to get the website URL (loading page). </h3>
+    <p id="url"></p>
+    <p id="url2"></p>
+
+    <p>
+        <strong>document.URL</strong> <br>
+        Ý nghĩa: Cũng trả về URL đầy đủ của tài liệu (document) hiện tại. <br>
+        Vị trí: document.URL là thuộc tính của document, một đối tượng đại diện cho nội dung của trang web. <br>
+        Sử dụng: Mặc dù hiện tại nó vẫn hoạt động, nhưng document.URL không được khuyến nghị vì có thể không nhất quán
+        hoặc không tương thích trong một số môi trường hoặc phiên bản trình duyệt.
+    </p>
+
+    <p>
+        <strong>window.location.href</strong> <br>
+        Ý nghĩa: Trả về chuỗi chứa URL đầy đủ của trang hiện tại. <br>
+        Vị trí: window.location là một đối tượng trong window đại diện cho toàn bộ thông tin
+        về URL của trang web, trong
+        đó href là thuộc tính chứa URL đầy đủ. <br>
+        Sử dụng: Đây là cách phổ biến và được khuyến nghị sử dụng.
+    </p>
+    <strong>
+        Nên dùng window.location.href vì nó là phương pháp tiêu chuẩn, tương thích rộng rãi và có khả năng mở rộng khi
+        cần làm việc với các thuộc tính cụ thể của URL.
+    </strong>
+    <script src="./main12.js"></script>
+</body>
+
+</html>

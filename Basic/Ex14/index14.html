@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Write a JavaScript exercise to get the filename extension. </h3>
+    <input type="file" id="file">
+    <button onclick="getFilenameExtension()">Get Filename Extension</button>
+    <p id="filename"></p>
+
+    <script>
+        const filename = document.getElementById('filename');
+        const fileInput = document.getElementById('file');
+
+        function getFilenameExtension() {
+            let file = fileInput.value;
+            extension = file.substring(file.lastIndexOf('.') + 1);
+            filename.innerHTML = "The filename extension is " + extension;
+        }
+    </script>
+</body>
+
+</html>
