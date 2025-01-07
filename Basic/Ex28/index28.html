@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Two Integers are in Range 50?99</title>
+</head>
+
+<body>
+    <h1>
+        Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return
+        true if either of them falls within the range.
+
+    </h1>
+    <p>Viết chương trình JavaScript để kiểm tra xem hai giá trị nguyên đã cho có nằm trong phạm vi 50..99 (đã bao gồm)
+        hay không. Trả về true nếu một trong hai giá trị đó nằm trong phạm vi.</p>
+    <script>
+        const min = 50;
+        const max = 99;
+        const number1 = Math.floor(Math.random() * 100);
+        const number2 = Math.floor(Math.random() * 100);
+
+        console.log(number1, number2);
+
+        function checkInRange(min, max, num1, num2) {
+            if ((num1 > min && num1 < max) || ((num2 > min && num2 < max))) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        console.log(checkInRange(min, max, number1, number2));
+    </script>
+</body>
+
+</html>

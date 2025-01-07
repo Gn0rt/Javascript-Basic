@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Last Digit of Three Integers is Same</title>
+</head>
+
+<body>
+    <h1>Write a JavaScript program that checks whether the last digit of three positive integers is the same</h1>
+    <p>Viết chương trình JavaScript kiểm tra xem chữ số cuối cùng của ba số nguyên dương có giống nhau không</p>
+    <script>
+        const num1 = 20;
+        const num2 = 30;
+        const num3 = 400;
+
+        function checkLastNumber(num1, num2, num3) {
+            const lastNum1 = num1 % 10;
+            const lastNum2 = num2 % 10;
+            const lastNum3 = num3 % 10;
+            if (lastNum1 === lastNum2 && lastNum1 === lastNum3) {
+                return `The last digits of the three numbers are the same (is: ${lastNum1}) `
+            }
+            return `The last digits of the three numbers are not the same [LastNum1 : ${lastNum1}, LastNum2 : ${lastNum2}, LastNum3 : ${lastNum3}]`
+        }
+
+        console.log(checkLastNumber(num1, num2, num3)); 
+    </script>
+</body>
+
+</html>

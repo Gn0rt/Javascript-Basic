@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Closest Value to 100 from Two Numbers</title>
+</head>
+
+<body>
+    <h1>Write a JavaScript program to find the closest value to 100 from two numerical values. </h1>
+    <p>Viết chương trình JavaScript để tìm giá trị gần nhất với 100 từ hai giá trị số.</p>
+    <script>
+        const num1 = 88
+        const num2 = 89
+
+        function closest(num1, num2) {
+            const unit1 = Math.abs(100 - num1)
+            const unit2 = Math.abs(100 - num2)
+
+            return (unit1 < unit2) ? `Number ${num1} closest to 100 bởi vì cách nhau ${unit1} đơn vị` : `Number ${num2} closest to 100 bởi vì cách nhau ${unit2} đơn vị`
+        }
+
+        console.log(closest(num1, num2))
+    </script>
+</body>
+
+</html>

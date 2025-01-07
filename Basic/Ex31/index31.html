@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Find Largest of Three Integers</title>
+</head>
+
+<body>
+    <h1>Write a JavaScript program to find the largest of three given integers. </h1>
+    <p>Viết chương trình JavaScript để tìm số lớn nhất trong ba số nguyên cho trước.</p>
+    <script>
+        const num1 = 6
+        const num2 = 22
+        const num3 = 10
+
+        const rs = (num1 > num2 && num1 > num3) ? `Max: ${num1}` : (num2 > num1 && num2 > num3) ? `Max: ${num2}` : `${num3}`
+
+        console.log(rs)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Last Digit of Three Integers is Same</title>
+</head>
+
+<body>
+    <h1>Check Character Between 2nd and 4th Positions in String</h1>
+    <p>
+        Viết chương trình kiểm tra xem ký tự đã cho có tồn tại giữa vị trí
+        thứ 2 và thứ 4 trong một chuỗi cho trước hay
+        không.
+    </p>
+    <p>Phương thức charAt() trả về ký tự tại một chỉ mục (vị trí) được chỉ định trong chuỗi</p>
+    <script>
+        const str = "python"
+        function checkCharPosition(str, char) {
+            let isCheck = 0
+            for (let i = 0; i < str.length; i++) {
+                //str.charAt(i) === char
+                if ((str[i] === char) && (i >= 1 && i <= 3)) {
+                    isCheck = 1;
+                    break;
+                }
+            }
+
+            if (isCheck == 1) return true
+            else return false  // replace false with your own desired value for false case. This function returns true if the character is found at the first, second, or third position, else it returns false.
+        }
+
+
+        console.log(checkCharPosition(str, 'y'))
+    </script>
+</body>
+
+</html>

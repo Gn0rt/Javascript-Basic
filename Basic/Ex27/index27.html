@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if String Starts with 'Java'</title>
+</head>
+
+<body>
+    <h1>Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise. </h1>
+    <script>
+        const str = "Java is very good"
+        function checkStr(str) {
+            if (str.length < 4) return false;
+            const strCheck = 'JAVA'.toLowerCase();
+            const cutStr = str.toLowerCase().slice(0, 4)
+            if (cutStr.includes(strCheck)) {
+                return `Chuỗi này có bắt đầu bằng '${strCheck}'`
+            }
+            else {
+                return `Chuỗi này không bắt đầu bằng '${strCheck}'`
+            }
+        }
+        console.log(checkStr(str))
+    </script>
+</body>
+
+</html>

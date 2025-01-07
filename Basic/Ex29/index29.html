@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Three Integers are in Range 50?99</title>
+</head>
+
+<body>
+    <h1>Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive).
+        Return true if one or more of them are in the specified range. </h1>
+    <p>Viết chương trình JavaScript để kiểm tra xem ba giá trị nguyên đã cho có nằm trong phạm vi 50..99 (đã bao gồm)
+        hay không. Trả về true nếu một hoặc nhiều trong số chúng nằm trong phạm vi được chỉ định.</p>
+    <script>
+        const min = 50;
+        const max = 99;
+        const number1 = Math.floor(Math.random() * 100);
+        const number2 = Math.floor(Math.random() * 100);
+        const number3 = Math.floor(Math.random() * 100);
+
+
+        console.log(number1, number2, number3);
+
+        function checkInRange(min, max, num1, num2, num3) {
+            if ((num1 > min && num1 < max) || (num2 > min && num2 < max) || (num3 > min && num3 < max)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        console.log(checkInRange(min, max, number1, number2));
+    </script>
+</body>
+
+</html>

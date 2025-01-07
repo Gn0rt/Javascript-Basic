@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove 'Script' from String at 5th Position</title>
+</head>
+
+<body>
+    <h1>
+        Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given
+        string. If "Script" appears in the string, return the string without "Script" otherwise return the original one.
+    </h1>
+    <p>
+        Viết chương trình JavaScript để kiểm tra xem chuỗi "Script" có xuất hiện ở vị trí thứ 5 (chỉ mục 4) trong một
+        chuỗi nhất định hay không. Nếu "Script" xuất hiện trong chuỗi, hãy trả về chuỗi không có "Script", nếu không
+        thì trả về chuỗi gốc.
+    </p>
+    <script>
+        const str = "Java ScRipT script"
+        const space = "";
+        function checkStrAtPosition(str) {
+            if (str.length < 6) {
+                return str
+            }
+            const strNeedCheck = 'Script'.toLowerCase();
+            const strToLower = str.toLowerCase();
+            // console.log(strToLower.slice(5,11) === strNeedCheck)
+            if (strToLower.slice(5, 11) === strNeedCheck) {
+                return `${strToLower.replace(strNeedCheck, space)}`
+            }
+            else {
+                return str;
+            }
+        }
+
+        console.log(checkStrAtPosition(str))
+    </script>
+</body>
+
+</html>
