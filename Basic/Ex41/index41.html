@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return 30, 40, or 20 Based on Same Numbers</title>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript program to check a set of three numbers; if the three numbers are the same return 30;
+        otherwise return 20; and if two numbers are the same return 40.
+
+        Viết chương trình JavaScript để kiểm tra bộ ba số; nếu ba số giống nhau thì trả về 30; nếu không thì trả về 20;
+        và nếu hai số giống nhau thì trả về 40.
+    </p>
+
+    <script>
+        function sameNumber(num1, num2, num3) {
+            if (num1 === num2 && num1 === num3) {
+                return 30;
+            }
+            else if (num1 === num2 || num1 === num3 || num2 === num3) {
+                return 40
+            }
+            return 20
+        }
+
+        console.log(sameNumber(0, 20, 10))
+    </script>
+</body>
+
+</html>

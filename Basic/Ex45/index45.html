@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Integer is 15, or Sum/Difference is 15</title>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript program that checks two integer values and returns true if either one is 15 or if their sum
+        or difference is 15.
+
+        Viết chương trình JavaScript kiểm tra hai giá trị số nguyên và trả về true nếu một giá trị bằng 15 hoặc nếu tổng
+        hoặc hiệu của chúng là 15.
+    </p>
+    <script>
+        function checkNum(a, b) {
+            return (
+                (a === 15 || b === 15) ||
+                (a + b === 15 || Math.abs(a - b) === 15)
+            )
+        }
+
+        console.log(checkNum(10, 15))
+        console.log(checkNum(10, 12))
+        console.log(checkNum(20, 5))
+
+    </script>
+</body>
+
+</html>

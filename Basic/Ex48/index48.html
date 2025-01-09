@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a Given String</title>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript program to reverse a given string.
+        Viết chương trình JavaScript để đảo ngược một chuỗi đã cho.
+    </p>
+    <script>
+        function reverse(str) {
+            // use for
+            let newStr = ""
+            for (var i = str.length - 1; i >= 0; i--) {
+                newStr += str[i]
+            }
+            return newStr
+        }
+        function reverse2(str) {
+            //The join() method also joins all array elements into a string.
+            //Split - cắt một chuỗi thành 1 array
+            //The reverse() method reverses the elements in an array
+            return str.split("").reverse().join("");
+        }
+        console.log(reverse("nam"));
+        console.log(reverse2("trong"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Only One Integer is Multiple of 7 or 11</title>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript program to check two given non-negative integers if one (not both) is a multiple of 7 or 11.
+
+        Viết chương trình JavaScript để kiểm tra hai số nguyên không âm cho trước nếu một (không phải cả hai) là bội số
+        của 7 hoặc 11.
+    </p>
+
+    <script>
+        function checkMultiple(a, b) {
+            if (a < 0 || b < 0) return false;
+            if (a % 7 === 0 || a % 11 === 0) {
+                return `${a} là bội số của 7 hoặc 11`
+            }
+            else if (b % 7 === 0 || b % 11 === 0) {
+                return `${b} là bội số của 7 hoặc 11`
+            }
+            else {
+                return "No Number"
+            }
+        }
+        console.log(checkMultiple(14, 21));
+        console.log(checkMultiple(14, 20));
+        console.log(checkMultiple(16, 20));
+
+    </script>
+</body>
+
+</html>

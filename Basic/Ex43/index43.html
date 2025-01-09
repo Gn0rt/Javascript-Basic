@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Check Rightmost Digits of Three Numbers</title>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them
+        have the same rightmost digit.
+
+        Viết chương trình JavaScript để kiểm tra từ ba số đã cho (số nguyên không âm) rằng hai hoặc tất cả chúng có cùng
+        chữ số ngoài cùng bên phải.
+    </p>
+    <script>
+        function checkRightmost(num1, num2, num3) {
+            // String
+            let strNum1 = num1.toString()
+            let strNum2 = num2.toString()
+            let strNum3 = num3.toString()
+            const lastNum1 = strNum1.charAt(strNum1.length - 1)
+            const lastNum2 = strNum2.charAt(strNum1.length - 1)
+            const lastNum3 = strNum3.charAt(strNum1.length - 1)
+
+            console.log(lastNum1, lastNum2, lastNum3)
+            if (Number(lastNum1) === Number(lastNum2) || Number(lastNum1) === Number(lastNum3) || Number(lastNum2) === Number(lastNum3)) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        function checkRightmost2(num1, num2, num3) {
+            // Number
+            let lastNum1 = num1 % 10
+            let lastNum2 = num2 % 10
+            let lastNum3 = num3 % 10
+            if ((lastNum1) === (lastNum2) || (lastNum1) === (lastNum3) || (lastNum2) === (lastNum3)) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        console.log(checkRightmost2(15, 3, 13))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoEvaluate if Integer is =20 and Less Than Anothercument</title>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript program that evaluates three given integers to determine if any one of them is greater than
+        or equal to 20 and less than at least one of the other two.
+
+        Viết chương trình JavaScript đánh giá ba số nguyên đã cho để xác định xem có bất kỳ số nguyên nào trong số chúng
+        lớn hơn hoặc bằng 20 và nhỏ hơn ít nhất một trong hai số còn lại hay không.
+    </p>
+    <script>
+        function compareNumber(a, b, c) {
+            if (a >= 20) {
+                return (a < b || a < c)
+            }
+            else if (b >= 20) {
+                return (b < a || b < c)
+            }
+            else if (c >= 20) {
+                return (c < a || c < b)
+            }
+            else {
+                return "No number"
+            }
+        }
+
+
+        console.log(compareNumber(23, 45, 10));
+        console.log(compareNumber(23, 23, 10));
+        console.log(compareNumber(21, 66, 75));
+        console.log(compareNumber(11, 16, 15));
+
+    </script>
+</body>
+
+</html>

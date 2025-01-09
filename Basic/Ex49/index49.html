@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Each Character with Next Alphabet Letter</title>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript program to replace every character in a given string with the character following it in the
+        alphabet.
+
+        Viết chương trình JavaScript để thay thế mọi ký tự trong một chuỗi nhất định bằng ký tự theo sau nó trong bảng
+        chữ cái.
+    </p>
+    <script>
+        // cách hướng dẫn
+        // function replaceChar(str, alphabet) {
+        //     var s = str.split('');
+        //     console.log(s);
+        //     for (var i = 0; i < s.length; i++) {
+        //         switch (s[i]) {
+        //             case ' ':
+        //                 break;
+        //             case 'z':
+        //                 s[i] = 'a'
+        //                 break;
+        //             case 'Z':
+        //                 s[i] = 'A'
+        //                 break;
+        //             default:
+        //                 s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+        //         }
+        //     }
+        //     return s.join('')
+        // }
+
+        //cách tự làm
+        const alphabet = [
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+            'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+            'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+            'Y', 'Z'
+        ]
+        function replaceC(str, alphabet) {
+            var s = str.split('');
+            for (var i = 0; i < s.length; i++) {
+                for (var j = 0; j < alphabet.length; j++) {
+                    if (s[i] === alphabet[j].toLowerCase()) {
+                        s[i] = alphabet[j + 1];
+                        break;
+                    }
+                }
+            }
+            console.log(s.join())
+        }
+        replaceC('hello', alphabet)
+        // console.log(replaceC('trong', alphabet))
+    </script>
+</body>
+
+</html>

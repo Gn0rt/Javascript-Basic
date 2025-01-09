@@ -30,6 +30,21 @@
 
         Nếu học sinh đạt điểm A+, chương trình sẽ trả về 'true'; nếu không, nó sẽ trả về 'false'.
     </p>
+
+
+
+    <script>
+        function examStatus(marks, isExam) {
+            if (isExam) {
+                return marks >= 90;
+            }
+
+            return marks >= 89 && marks <= 100;
+        }
+        console.log(examStatus("78", "")) //F
+        console.log(examStatus("89", true)) // F
+        console.log(examStatus("98", true)) // T
+    </script>
 </body>
 
 </html>
