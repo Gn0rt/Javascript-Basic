@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Number to Hours and Minutes</title>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript application that transforms a provided numerical value into hours and minutes.
+        Viết một ứng dụng JavaScript chuyển đổi một giá trị số được cung cấp thành giờ và phút.
+        (ví dụ: 71p = 1h11p)
+        - cách tự làm là đổi một số nguyên thành thời gian
+        (ví dụ: 253 -> 2:53, 263 -> false, )
+    </p>
+    <script>
+        /*
+        //cách hướng dẫn
+
+        function time_convert(num) {
+            var hours = Math.floor(num / 60);
+            var minutes = num % 60;
+            return hours + ":" + minutes;
+        }
+        console.log(time_convert(71));
+        console.log(time_convert(450));
+        console.log(time_convert(1441));
+        */
+
+        //cách tự làm tự hiểu
+        function transform(value) {
+            if (typeof value !== 'string') {
+                value = value.toString();
+            }
+            if (value.length > 4) return false
+            switch (value.length) {
+                case 3:
+                    //123
+                    const hour = value.slice(0, 2)
+                    const minutes = value.slice(2, 3)
+                    let newHour, newMinutes
+                    if (Number(hour) > 23) {
+                        newHour = value.slice(0, 1)
+                        newMinutes = value.slice(1, 3)
+                        if (Number(newMinutes) > 60) {
+                            return false
+                        }
+                        else {
+                            return `Time is: ${newHour}:${newMinutes}`
+                        }
+                    } else {
+                        if (Number(hour) >= 10) {
+                            return `Time is: ${hour}:0${minutes}`
+                        }
+
+                    }
+                    break;
+                case 2:
+                    const hour1 = value.slice(0, 1)
+                    const minutes1 = value.slice(1, 2)
+                    // if()
+                    return `Time is: 0${hour1}:0${minutes1}`
+                    break;
+                case 1:
+                    const hour2 = value.slice(0, 1)
+                    return `Time is: 0${hour2}:00`
+                default:
+                    break;
+
+            }
+            //1234
+            // const hour = value.slice(0,2)
+            // const minutes = value.slice(2,4)
+            // console.log(hour, minutes)
+            // if(Number(hour) > 24 || Number(minutes) > 60) {
+            //     return false
+            // }
+            // else {
+            //     return `Time is: ${hour}:${minutes}`
+            // }
+        }
+
+        console.log(transform(25))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check 'a' and 'b' Separated by Exactly 3 Places</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để kiểm tra xem các ký tự a và b có cách nhau đúng 3 vị trí ở bất kỳ đâu (ít nhất
+        một lần) trong một chuỗi nhất định hay không.
+    </p>
+    <script>
+        function abCheck(str) {
+            return (/a...b/.test(str) || (/b...a/.test(str)));
+        }
+
+        console.log(abCheck("Chainsbreak"))
+        console.log(abCheck("pane  borrowed"));
+        console.log(abCheck("abCheck"));
+
+    </script>
+</body>
+
+</html>
