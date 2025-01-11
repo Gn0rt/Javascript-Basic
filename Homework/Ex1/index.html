@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Dùng javascript viết một chương trình xử lý chuỗi. cho một chuỗi bất kỳ, tìm ra các loại ký tự trong chuỗi và
+        đếm số lần xuất hiện
+    </p>
+    <script>
+        function countCharacters(str) {
+            const charCount = {};
+            for (let i = 0; i < str.length; i++) {
+                // Lấy ký tự tại vị trí i
+                const char = str[i];
+
+                if (charCount[char]) {
+                    // Nếu ký tự đã có trong đối tượng, tăng số lần xuất hiện
+                    charCount[char]++;
+                } else {
+                    // Nếu chưa có, khởi tạo số lần xuất hiện là 1
+                    charCount[char] = 1;
+                    console.log(charCount)
+                }
+            }
+            return charCount;
+        }
+        const inputString = "hello world";
+        const result = countCharacters(inputString);
+
+        // console.log(result);
+
+
+
+    </script>
+</body>
+
+</html>

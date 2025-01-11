@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình với đầu vào là 2 tập hợp số A và B, cần chia ra thành 3 tập hợp: các phần tử chỉ có của A, của
+        B, và chung AB
+    </p>
+    <script>
+        //code chay
+        const A = [1, 2, 3, 4]
+        const B = [3, 4, 5, 6, 7]
+
+        function taphop(a, b) {
+            let C = []
+            let newA = []
+            let newB = []
+            for (let i = 0; i < a.length; i++) {
+                for (let j = 0; j < b.length; j++) {
+                    if (a[i] === b[j]) {
+                        C.push(a[i])
+                        break
+                    }
+                }
+            }
+
+            for (let i = 0; i < a.length; i++) {
+                let check = false;
+                for (let j = 0; j < C.length; j++) {
+                    if (a[i] === C[j]) {
+                        check = true;
+                        break
+                    }
+                }
+                if (!check) {
+                    newA.push(a[i])
+                }
+            }
+
+            for (let i = 0; i < b.length; i++) {
+                let check = false;
+                for (let j = 0; j < C.length; j++) {
+                    if (b[i] === C[j]) {
+                        check = true;
+                        break
+                    }
+                }
+                if (!check) {
+                    newB.push(b[i])
+                }
+            }
+
+
+            return `Giao cua A va B la [${C}] và gia tri A moi la [${newA}] và gia tri B moi la [${newB}]`
+
+        }
+
+        console.log(taphop(A, B))
+
+        /*
+        //    sử dụng metho
+        const A = [1,2,3,4]
+        const B = [3,4,5,6,7]
+
+        function taphop(a, b) {
+            const giao = a.filter(value => b.includes(value))
+
+            const newA = a.filter(value => !b.includes(value))
+            const newB = b.filter(value => !a.includes(value))
+
+            return `Giao của A và B là [${giao}] và tập hợp mới của A là [${newA}], tập hợp mới của B là [${newB}]`
+        }
+
+        console.log(taphop(A,B))
+        */
+    </script>
+</body>
+
+</html>
