@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter II</title>
+</head>
+
+<body>
+    <script>
+        /**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+        var createCounter = function (init) {
+            let value = init
+            return {
+                increment: function () {
+                    return ++value
+                },
+                reset: function () {
+                    return value = init
+                },
+                decrement: function () {
+                    return --value
+                }
+            }
+        };
+
+
+        const counter = createCounter(0)
+        console.log(counter.increment())
+        console.log(counter.increment())
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Be Or Not To Be</title>
+</head>
+
+<body>
+    <p>
+        Write a function expect that helps developers test their code. It should take in any value val and return an
+        object with the following two functions.
+        <br>
+        toBe(val) accepts another value and returns true if the two values === each other. If they are not equal, it
+        should throw an error "Not Equal".
+        <br>
+        notToBe(val) accepts another value and returns true if the two values !== each other. If they are equal, it
+        should throw an error "Equal".
+        <br>
+        Example 1:
+        <br>
+        Input: func = () => expect(5).toBe(5) <br>
+        Output: {"value": true} <br>
+        Explanation: 5 === 5 so this expression returns true. <br>
+        Example 2: <br>
+
+        Input: func = () => expect(5).toBe(null) <br>
+        Output: {"error": "Not Equal"} <br>
+        Explanation: 5 !== null so this expression throw the error "Not Equal". <br>
+        Example 3: <br>
+
+        Input: func = () => expect(5).notToBe(null) <br>
+        Output: {"value": true} <br>
+        Explanation: 5 !== null so this expression returns true.
+    </p>
+    <script>
+        var expect = function (val) {
+            return {
+                toBe: function (value) {
+                    if (value === value) return true;
+                    else throw new Error("Not Equals")
+                },
+                notToBe: function (value) {
+                    if (value !== value) return true
+                    else return "Equal";
+                }
+            }
+        };
+        console.log(expect(5).toBe(5))
+        console.log(expect(5).notToBe(5))
+        // function checkNumber(num) {
+        //     if (num < 0) {
+        //         throw new Error("Số không thể nhỏ hơn 0");
+        //     }
+        //     console.log("Số hợp lệ: " + num);
+        // }
+
+        // checkNumber(-5); // Ném lỗi: Số không thể nhỏ hơn 0
+
+
+    </script>
+</body>
+
+</html>

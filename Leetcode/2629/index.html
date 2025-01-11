@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Composition</title>
+</head>
+
+<body>
+
+    <script>
+        var compose = function (functions) {
+
+            return function (x) {
+                for (let i = functions.length - 1; i >= 0; i--) {
+                    x = functions[i](x)
+                    console.log(x)
+                }
+                return x
+            }
+        };
+
+
+        const fn = compose([x => x + 1, x => 2 * x])
+        console.log(fn(4)) // 9
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richest Customer Wealth</title>
+</head>
+
+<body>
+    <h1>Richest Customer Wealth</h1>
+
+    <script>
+        const asset = [[1, 2], [3, 4], [4, 5]]
+        var maximumWealth = function (accounts) {
+            let newAsset = []
+            asset.map(function (account, index) {
+                let sum = 0;
+                // console.log(account)
+                for (let i = 0; i < account.length; i++) {
+                    sum += account[i]
+                }
+                newAsset.push(sum)
+
+                // console.log(account, sum, newAsset)
+                return newAsset
+            })
+            let max = newAsset[0]
+            newAsset.forEach(function (value, index) {
+                if (max < newAsset[index + 1]) {
+                    max = newAsset[index + 1]
+                }
+                return max;
+            })
+            let newMax = max
+            return newMax
+        }
+
+
+        console.log(maximumWealth(asset))
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Elements from Array</title>
+</head>
+
+<body>
+    <script>
+        var filter = function (arr, fn) {
+            let fil = []
+            for (let i = 0; i < arr.length; i++) {
+                if (fn(arr[i], i)) {
+                    fil.push(arr[i]);
+                }
+            }
+            return fil
+        };
+
+
+        function greaterThan10(n) {
+            if (n > 10) {
+                return n;
+            }
+        }
+        function firstIndex(value, index) {
+            return index === 0;
+
+        }
+
+        function plusOne(value) {
+            var newVal = value + 1;
+            return newVal !== 0 ? true : false
+        }
+
+        console.log(filter([10, 20, 30, 1, 0], greaterThan10))
+        console.log(filter([10, 20, 30, 1, 0], firstIndex))
+        console.log(filter([-2, -1, 0, 1, 2], plusOne))
+
+
+    </script>
+</body>
+
+</html>

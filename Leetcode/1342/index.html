@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of Steps to Reduce a Number to Zero</title>
+</head>
+
+<body>
+    <h1>Number of Steps to Reduce a Number to Zero</h1>
+    <script>
+        var numberOfSteps = function (num) {
+
+            var count = 0
+            while (num > 0) {
+                if (num % 2 === 0) {
+                    num /= 2;
+                } else {
+                    num--;
+                }
+                count++;
+            }
+            return count;
+
+        }
+        console.log(numberOfSteps(14))
+    </script>
+</body>
+
+</html>

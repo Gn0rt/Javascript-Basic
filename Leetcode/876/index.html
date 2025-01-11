@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle of the Linked List</title>
+</head>
+
+<body>
+    <h1>Given the head of a singly linked list, return the middle node of the linked list.
+
+        If there are two middle nodes, return the second middle node.</h1>
+    <p>
+        Input: head = [1,2,3,4,5]
+        Output: [3,4,5]
+        Explanation: The middle node of the list is node 3.
+    </p>
+    <script>
+        //Bạn có thể định nghĩa ListNode bằng cách sử dụng hàm khởi tạo (constructor):
+        function ListNode(x) {
+            this.value = x;
+            this.next = null;
+        }
+
+        function linkedList(arr) {
+            let list = new ListNode(arr[0]);
+            // console.log(list);
+            let selectedNode = list;
+            for (let i = 1; i < arr.length; i++) {
+                selectedNode.next = new ListNode(arr[i]);
+                //   console.log(selectedNode)
+                selectedNode = selectedNode.next
+            }
+
+            return list
+        }
+
+        var middleNode = function (head) {
+            let count = 0;
+            let current = head;
+            // console.log(current)
+            // Đếm số lượng node
+            while (current) {
+                count++;
+                current = current.next;
+            }
+            // Tìm node giữa
+            let mid = Math.floor(count / 2);
+            current = head;
+            while (mid > 0) {
+                current = current.next;
+                mid--;
+            }
+
+            return current;
+        }
+
+        l = [3, 1, 2, 3, 4, 5];
+        var newListNode = linkedList(l)
+        // console.log(linkedList(l));
+        console.log(middleNode(newListNode))
+    </script>
+</body>
+
+</html>
