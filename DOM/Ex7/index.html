@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table Dynamically</title>
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Viết hàm JavaScript để tạo bảng, chấp nhận số hàng và số cột, đồng thời nhập số hàng-cột dưới dạng nội dung ô
+        (ví dụ: Hàng-0 Cột-0).
+    </p>
+    <table id="myTable" border="1">
+    </table>
+    <form>
+        <input type="button" onclick="createTable()" value="Create the table">
+    </form>
+
+    <script>
+        function createTable() {
+            // let rows = parseInt(prompt("Enter the number of rows:"));
+            // let cols = parseInt(prompt("Enter the number of columns:"));
+            // let content = prompt("Enter new content:");
+            // let table = document.getElementById("myTable");
+
+            // for (let i = 0; i < rows; i++) {
+            //     let row = table.insertRow();
+            //     for (let j = 0; j < cols; j++) {
+            //         let cell = row.insertCell();
+            //         cell.innerHTML = content;
+
+            //     }
+            // }
+
+            rn = window.prompt("Input number of rows", 1);
+            cn = window.prompt("Input number of columns", 1);
+            // Looping through rows
+            for (var r = 0; r < parseInt(rn, 10); r++) {
+                // Inserting a new row at index r in the table
+                var x = document.getElementById('myTable').insertRow(r);
+                for (var c = 0; c < parseInt(cn, 10); c++) {
+                    // Inserting a new cell at index c in the current row
+                    var y = x.insertCell(c);
+                    y.innerHTML = "Row-" + r + " Column-" + c;
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

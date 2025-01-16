@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Display</title>
+</head>
+
+<body>
+    <button id="btn" onclick="randomImage()">Show random image</button>
+
+    <script>
+        function randomImage() {
+            const images = [
+                {
+                    src: "https://vgbc.org.vn/wp-content/uploads/2022/11/matcau3-e1668766536791.png",
+                    width: "240",
+                    height: "160"
+                },
+                {
+                    src: "https://hctechco.com/wp-content/uploads/2022/10/the-tich-hinh-cau-1.jpg",
+                    width: "320",
+                    height: "195"
+                },
+                {
+                    src: "https://www.sushigarden.com.vn/Portals/28186/tintuc/the%20tich%20khoi%20cau%203.png",
+                    width: "320",
+                    height: "195"
+                }
+            ]
+            let imgLength = images.length;
+            console.log(Math.floor(Math.random() * imgLength))
+            let randomIndex = Math.floor(Math.random() * imgLength);
+            let img = document.createElement("img");
+            img.src = images[randomIndex].src;
+            img.width = images[randomIndex].width;
+            img.height = images[randomIndex].height;
+
+            document.body.appendChild(img);
+        }
+    </script>
+</body>
+
+</html>

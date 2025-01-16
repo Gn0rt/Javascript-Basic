@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Paragraph</title>
+</head>
+
+<body>
+    <p>Clicking on the button the font, font size, and color of the paragraph text will be changed.</p>
+    <p id='text'>JavaScript Exercises - w3resource</p>
+    <div>
+        <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+
+    <script>
+        function js_style() {
+            var text = document.getElementById('text');
+            text.style.color = 'red';
+            text.style.fontSize = '24px';
+            text.style.fontWeight = 'bold';
+            text.style.textTransform = 'uppercase';
+        }
+    </script>
+</body>
+
+</html>

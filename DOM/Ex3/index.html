@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Background Color</title>
+    <style>
+        #paragraph {
+            background-color: yellow;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Write a JavaScript program to set paragraph background color.
+    </p>
+    <div id="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nulla corrupti quibusdam consectetur quasi,
+        nesciunt delectus repudiandae dolores soluta sequi laboriosam iusto, sapiente magnam atque vel maiores
+        cupiditate! Nisi, est.
+    </div>
+    <button onclick="changeBg()">Change background</button>
+
+    <script>
+        function changeBg() {
+            const pg = document.getElementById("paragraph");
+            console.log(pg);
+            pg.style.backgroundColor = "green";
+        }
+
+    </script>
+</body>
+
+</html>

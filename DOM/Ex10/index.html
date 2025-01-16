@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphere Volume Calculator</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để tính thể tích hình cầu.
+    </p>
+    <form action="" id="formCal">
+        <label for="radius">Radius</label>
+        <input name="radius" type="text" id="radius">
+        <label for="vlomue">Volume</label>
+        <input type="text" name="volume" id="volume">
+        <input type="button" onclick="calcuVolume()" value="Calculate" id="btn">
+    </form>
+
+    <script>
+        function calcuVolume() {
+            var radius = document.getElementById("radius").value;
+            var inputVolume = document.getElementById("volume");
+            var volume = (4 / 3) * Math.PI * Math.pow(Number(radius), 3);
+            inputVolume.value = volume.toFixed(2); // Round to 2 decimal places
+            console.log(volume);
+        }
+    </script>
+</body>
+
+</html>

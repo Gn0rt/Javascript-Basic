@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Dropdown Items</title>
+</head>
+
+<body>
+    <p>Viết chương trình JavaScript để đếm và hiển thị các mục trong danh sách thả xuống trong cửa sổ cảnh báo.</p>
+    <form>
+        Select your favorite Color :
+        <select id="mySelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>White</option>
+        </select>
+        <input type="button" onclick="getOptions()" value="Count and Output all items">
+    </form>
+
+    <script>
+        function getOptions() {
+            var select = document.getElementById("mySelect");
+            var options = select.options;
+            var selectLength = select.length;
+            var txt = `Có ${selectLength} lựa chọn: \n`;
+            console.log(selectLength)
+            for (var i = 0; i < selectLength; i++) {
+                txt += `${options[i].text}\n`
+            }
+            console.log(txt)
+
+            // // Getting reference to the select element with id 'mySelect'
+            // var x = document.getElementById("mySelect");
+            // // Initializing text variable to hold the message
+            // var txt1 = "No. of items : ";
+            // var i;
+            // // Getting the length of the select element
+            // l = document.getElementById("mySelect").length;
+            // // Concatenating the length of the select element to the message
+            // txt1 = txt1 + l;
+            // // Looping through each option in the select element
+            // for (i = 0; i < x.length; i++) {
+            //     // Concatenating each option's text to the message with a newline character
+            //     txt1 = txt1 + "\n" + x.options[i].text;
+            // }
+            // // Displaying the message in an alert dialog
+            // alert(txt1);
+        }
+    </script>
+</body>
+
+</html>

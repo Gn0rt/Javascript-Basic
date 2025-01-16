@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Table Cell</title>
+</head>
+
+<body>
+    <p>
+        Viết hàm JavaScript chấp nhận một hàng, cột (để xác định một ô cụ thể) và một chuỗi để cập nhật nội dung của ô.
+    </p>
+    <table id="myTable" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+        <tr>
+            <td>Row3 cell1</td>
+            <td>Row3 cell2</td>
+        </tr>
+    </table>
+    <form>
+        <input type="button" onclick="changeContent()" value="Change content">
+    </form>
+
+    <script>
+        function changeContent() {
+            let row = parseInt(prompt("Enter row number (1-3):")) - 1; //Chuyển chỉ mục hàng thành zero-based
+            let col = parseInt(prompt("Enter column number (1-2):")) - 1;
+            let content = prompt("Enter new content:");
+            let x = document.getElementById("myTable").rows[parseInt(row, 10)].cells;
+            x[parseInt(col)].innerHTML = content
+        }
+
+    </script>
+</body>
+
+</html>
