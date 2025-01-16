@@ -14,7 +14,7 @@
         kết nhất định.
     </p>
     <p>
-        [<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">On mouse over here bold words of the
+        [<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">
             Di chuột qua đây</a>]
     </p>
 
@@ -26,7 +26,22 @@
     </p>
 
     <script>
+        var bold_Items;
+        window.onload = getBoldItem();
+        function getBoldItem() {
+            bold_Items = document.getElementsByTagName('strong');
+        }
 
+        function highlight() {
+            for (var i = 0; i < bold_Items.length; i++) {
+                bold_Items[i].style.color = "green";
+            }
+        }
+        function return_normal() {
+            for (var i = 0; i < bold_Items.length; i++) {
+                bold_Items[i].style.color = "black";
+            }
+        }
     </script>
 </body>
 
