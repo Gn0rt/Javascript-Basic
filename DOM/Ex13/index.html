@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Resize Dimensions</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để lấy chiều rộng và chiều cao của cửa sổ (bất cứ khi nào cửa sổ được thay đổi kích
+        thước).
+    </p>
+    <p class="size"></p>
+    <button onclick="getScreenSize()">Lấy thông số window</button>
+    <script>
+        function getScreenSize() {
+            const size = document.querySelector(".size")
+            console.log(size)
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            console.log(width, height)
+            size.innerHTML = `Width: ${width}px and Height: ${height}px`
+        }
+    </script>
+</body>
+
+</html>
