@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Objects for Equivalent Properties</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để so sánh hai đối tượng nhằm xác định xem đối tượng thứ nhất có chứa các giá trị
+        thuộc tính tương đương với đối tượng thứ hai hay không.
+
+        Sử dụng Object.keys() để lấy tất cả các khóa của đối tượng thứ hai.
+
+        Sử dụng Array.prototype.every(), Object.prototype.hasOwnProperty() và so sánh nghiêm ngặt để xác định xem tất cả
+        các khóa có tồn tại trong đối tượng đầu tiên và có cùng giá trị hay không.
+    </p>
+    <script>
+        const obj1 = {
+            age: 16,
+            address: "Ha Noi",
+            beard: true,
+            gender: "male",
+            name: "John"
+
+        }
+
+        const obj2 = {
+            age: 16,
+            address: "Ha Noi",
+            beard: true,
+            gender: "male",
+            name: "John"
+        }
+        const obj3 = {
+            age: 12,
+            address: "Ha Noi",
+            beard: true,
+            school: "EAUT"
+
+        }
+        // console.log(obj1["age"])
+        function match(obj1, obj2) {
+            for (let key in obj2) {
+                console.log(key)
+                if (!obj1.hasOwnProperty(key)) {
+                    return false;
+                }
+                // if(obj1[key] !== obj2[key]) {
+                //     return false;
+                // }
+            }
+
+            return true;
+        }
+
+        console.log(match(obj1, obj2)); //true
+        console.log(match(obj1, obj3)); //false
+
+
+
+    </script>
+</body>
+
+</html>

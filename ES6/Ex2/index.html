@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy String to Clipboard</title>
+</head>
+
+<body>
+    <p>Viết chương trình JavaScript để sao chép một chuỗi vào clipboard.</p>
+
+    <input type="text" value="Hello" id="myInput">
+    <button onclick="handleCopy()">Copy text</button>
+    <script>
+        function handleCopy() {
+
+            //C1: thông thường
+            var text = document.getElementById("myInput")
+            text.select();// Chọn toàn bộ văn bản trong input
+            navigator.clipboard.writeText(text.value)// Sao chép văn bản vào clipboard
+
+            alert("Text copied to clipboard: " + text.value);
+
+            //C2: sử dụng promise
+            //navigator.clipboard.writeText(text.value) bản chất đã là một Promise, nên không cần khai báo new Promise().
+            // Hàm writeText() đã trả về một Promise
+            // navigator.clipboard.writeText(text.value)
+            //     .then(() => {
+            //         alert("Text copied to clipboard: " + text.value);
+            //     })
+            //     .catch(err => {
+            //         alert("Failed to copy text: " + err);
+            //     });
+        }
+    </script>
+</body>
+
+</html>

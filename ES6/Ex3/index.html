@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV String to 2D Array</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để chuyển đổi chuỗi giá trị được phân tách bằng dấu phẩy (CSV) thành mảng 2D.
+        - split(): cắt một chuỗi thành một Array
+        - map(): duyệt qua mảng và tạo một mảng mới với các giá trị tạo ra từ các giá trị của mảng ban đầu
+
+    </p>
+
+
+    <script>
+        function csvToArray(csvString) {
+            // return csvString.split("\n").map(row => row.split(",").map(cell => cell.trim()));
+            const a = csvString.split("\n") // chuyển thành mảng
+            console.log(a);
+            const b = a.map(function (row) {
+                //trả về các phần tử 
+                console.log(row)
+                //chuyển thành mảng
+                const c = row.split(",")
+                console.log(c)
+                return c.map(cell => cell.trim())
+
+            })
+            return b
+        }
+
+        // Test case
+        const csvData = `Name, Age, City
+        Alice, 25, New York
+        Bob, 30, Los Angeles
+        Charlie, 35, Chicago`;
+
+        const result = csvToArray(csvData);
+        console.log(result);
+    </script>
+
+</body>
+
+</html>

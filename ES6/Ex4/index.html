@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV to 2D Array of Objects</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để chuyển đổi chuỗi giá trị được phân tách bằng dấu phẩy (CSV) thành mảng đối tượng
+        2D. Hàng đầu tiên của chuỗi được dùng làm hàng tiêu đề.
+    </p>
+
+    <script>
+        function csvToObjectArray(csvString) {
+            //chuyen thanh mang 2 chieu
+            let rows = csvString.split("\n").map(row => row.split(",").map(cell => cell.trim())); // Tách dòng và cột
+
+            //lay mang dau tien lam tieu de
+            let headers = rows[0];
+            //lay mang con lai là du lieu
+            let data = rows.slice(1);
+
+            console.log(headers)
+            console.log(data)
+            return data.map(row => {
+                let obj = {};
+                console.log(row)
+                headers.forEach((header, index) => {
+                    console.log(header + ": " + row[index])
+                    obj[header] = row[index]; // Gán giá trị theo key tiêu đề
+                });
+
+                return obj;
+            });
+        }
+
+        // Test case
+        const csvData = `Name,Age,City
+        Alice,25,New York
+        Bob,30,Los Angeles
+        Charlie,35,Chicago`;
+
+        const result = csvToObjectArray(csvData);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

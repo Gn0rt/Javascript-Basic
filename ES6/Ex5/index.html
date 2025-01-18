@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects to CSV String</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để chuyển đổi một mảng đối tượng thành chuỗi giá trị được phân tách bằng dấu phẩy
+        (CSV) chỉ chứa các cột được chỉ định.
+    </p>
+    <script>
+        function arrayToCSV(data, columns) {
+            if (!data.length) return "";
+
+            let csv = [];
+
+            // Add header row (selected columns)
+            csv.push(columns.join(","));
+            console.log(csv);
+            // Add data rows
+            data.forEach(obj => {
+                console.log(obj);
+                //Nullish Coalescing Operator (??), một toán tử được giới thiệu trong ES2020 (ES11).
+                csv.push(columns.map(key => obj[key] ?? "").join(","));
+                /*csv.push(columns.map(function(key) {
+                    console.log(obj[key]);
+                    //join - thay đổi khoảng ngăn cách và trả về chuỗi
+                    return (obj[key]?? ""); // Nếu khóa không tồn tại hoặc không có giá trị, trả về chuỗi trống
+                }))*/
+            });
+
+            return csv.join("\n"); // Join all rows with newline separator
+        }
+
+        // Test case
+        const data = [
+            { Name: "Alice", Age: 25, City: "New York", Gender: "Female" },
+            { Name: "Bob", Age: 30, City: "Los Angeles", Gender: "Male" },
+            { Name: "Charlie", Age: 35, City: "Chicago", Gender: "Male" }
+        ];
+
+        const selectedColumns = ["Name", "Age", "City"]; // Only these columns will be included
+
+        const csvString = arrayToCSV(data, selectedColumns);
+        console.log(csvString);
+
+    </script>
+</body>
+
+</html>
