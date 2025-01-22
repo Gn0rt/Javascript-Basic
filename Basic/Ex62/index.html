@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Move Last 3 Characters to Start of String</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để di chuyển ba ký tự cuối cùng về đầu một chuỗi nhất định. Độ dài chuỗi phải lớn
+        hơn hoặc bằng ba.
+    </p>
+    <script>
+        function moveCharToTop(str) {
+            if (str.length < 3) return false;
+            const lastChar = str.slice(-3);
+            console.log(lastChar);
+            return lastChar + str.slice(0, str.length - 3);
+
+        }
+
+        console.log(moveCharToTop("Javascript"))
+        console.log(moveCharToTop("Python"))
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenate Two Strings Without First Character</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để nối hai chuỗi ngoại trừ ký tự đầu tiên của chúng.
+    </p>
+    <script>
+        function concatStr(str1, str2) {
+
+            console.log(str1.slice(1, str1.length).concat(str2.slice(1, str2.length)))
+            return str1.slice(1, str1.length).concat(str2.slice(1, str2.length))
+        }
+
+        console.log(concatStr("Javascript", "Hello"))
+        console.log(concatStr("Python", "ABC"))
+
+    </script>
+</body>
+
+</html>

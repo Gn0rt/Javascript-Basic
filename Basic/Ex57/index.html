@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create String of Specified Copies</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để tạo một chuỗi gồm các bản sao được chỉ định (số dương) của một chuỗi đã cho.
+        - repeat(): trả về một chuỗi mới với một số bản sao của chuỗi
+    </p>
+    <script>
+        function copyStr(str, n) {
+            //c1
+            let result = '';
+            for (let i = 0; i < n; i++) {
+                result += str;
+            }
+
+            //c2
+            //return str.repeat(n)
+            return result;
+
+
+        }
+
+        console.log(copyStr('Hello', 5));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Middle 3 Characters from Odd-Length String</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để tạo một chuỗi sử dụng ba ký tự ở giữa của một chuỗi có độ dài lẻ cho trước. Độ
+        dài chuỗi phải lớn hơn hoặc bằng ba.
+    </p>
+    <script>
+        function getCharMiddle(str) {
+            if (str.length < 3) return str;
+            if (str.length % 2 !== 0) {
+                let mid = (str.length + 1) / 2;
+                return str.slice(mid - 2, mid + 1)
+            }
+            else {
+                let mid = str.length / 2;
+                return str.slice(mid - 2, mid + 1)
+            }
+        }
+
+        console.log(getCharMiddle("abcdefg"))
+        console.log(getCharMiddle("Python"))
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract First Half of Even-Length String</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để trích xuất nửa đầu của chuỗi chẵn
+    </p>
+    <script>
+        function extractStr(str) {
+            if (str.length % 2 !== 0) return false;
+            const index = str.length / 2;
+            return str.slice(0, index);
+
+        }
+
+        console.log(extractStr("Javascript"))
+        console.log(extractStr("Python"))
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Copies of Last 3 Characters</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để tạo một chuỗi cập nhật gồm 4 bản sao của 3 ký tự cuối cùng của chuỗi gốc đã cho.
+        Độ dài chuỗi phải từ 3 trở lên.
+    </p>
+    <script>
+        function copyStr(str, n) {
+            if (str.length < 3) return false;
+            const newStr = str.slice(-3);
+            //console.log(str.slice(-3))
+            return newStr.repeat(n);
+
+
+        }
+
+        console.log(copyStr('Hellololeeebaka', 4));
+    </script>
+</body>
+
+</html>

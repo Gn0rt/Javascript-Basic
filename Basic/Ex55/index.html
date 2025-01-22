@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Equal Number of 'p's and 't's</title>
+</head>
+
+<body>
+    <p>Viết chương trình JavaScript để kiểm tra xem một chuỗi đã cho có chứa số p và t bằng nhau hay không.</p>
+
+    <script>
+        const str = "paatpss"
+        const str2 = "paattpss"
+
+        //c1
+        function equl_pt(str) {
+            console.log(str.split(""))
+            let arr = str.split("");
+            let count1 = 0, count2 = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (arr[i] === "p") {
+                    count1++;
+                }
+                if (arr[i] === "t") {
+                    count2++;
+                }
+            }
+            if (count1 === count2) {
+                return true
+            }
+            else {
+                return false;
+            }
+            // return `P: ${count1}; T: ${count2}`;
+        }
+        //c2
+        // function equl_pt(str) {
+        //     const newStr1 = str.replace(/p/g, "")
+        //     const newStr2 = str.replace(/t/g, "")
+
+        //     if (newStr1.length === newStr2.length) {
+        //         return true;
+        //     }
+        //     else {
+        //         return false;
+        //     }
+        // }
+
+        console.log(equl_pt(str))
+        console.log(equl_pt(str2))
+
+    </script>
+
+</body>
+
+</html>

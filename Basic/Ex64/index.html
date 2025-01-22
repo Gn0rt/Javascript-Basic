@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenate Strings with Matching Length</title>
+</head>
+
+<body>
+    <p>
+        Viết chương trình JavaScript để nối hai chuỗi và trả về kết quả. Nếu độ dài của chuỗi không khớp thì hãy xóa các
+        ký tự khỏi chuỗi dài hơn.
+    </p>
+    <script>
+        function concatStr(str1, str2) {
+            if (str1.length > str2.length) {
+                return (str1.slice(-(str2.length)).concat(str2));
+            }
+            else if (str1.length < str2.length) {
+                return (str2.slice(-(str1.length)).concat(str1));
+            }
+            else {
+                return (str1 + str2);
+            }
+        }
+
+        console.log(concatStr("Python", "JS"))
+        console.log(concatStr("JS", "PHP"))
+        console.log(concatStr("JS", "AB"))
+
+
+
+    </script>
+</body>
+
+</html>
