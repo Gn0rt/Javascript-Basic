@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Thay đổi một đoạn văn bản</h1>
+    <p class="content">Xin chào, Tôi là người hướng dẫn cho bạn!</p>
+    <button onclick="nextContent()">Tiếp tục</button>
+
+    <script>
+        const content = document.querySelector('.content');
+        console.log(content);
+        const message = [
+            "Xin chào, tôi là người hướng dẫn cho bạn!",
+            "Chào mừng bạn đến với website của tôi!",
+            "Hy vọng bạn sẽ học được nhiều điều bổ ích!",
+            "Chúc bạn học lập trình vui vẻ!"
+        ]
+        let index = 0;
+        function nextContent() {
+            index = (index + 1) % message.length;
+            console.log(index, message.length, (index % message.length));
+            console.log(5 % 4)
+            content.textContent = message[index];
+        }
+    </script>
+</body>
+
+</html>

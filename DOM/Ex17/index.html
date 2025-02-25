@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ex17</h1>
+    <p class="content active">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, explicabo vero
+        tempore, laborum non officiis tempora at illo corporis a rerum, quisquam incidunt. Recusandae corporis nam
+        sapiente earum soluta consequuntur?</p>
+    <button onclick="Toggle()">Toggle</button>
+    <script>
+        const content = document.querySelector('.content');
+        console.log(content)
+        function Toggle() {
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+            } else {
+                content.classList.add('active');
+            }
+        }
+        // function Toggle() {
+        //     content.classList.toggle('active');
+        // }
+    </script>
+</body>
+
+</html>

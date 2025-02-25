@@ -2,6 +2,10 @@ const inputValue = document.querySelector('.inputValue');
 const lists = document.querySelector('.lists');
 console.log(lists)
 console.log(inputValue);
+//1. Lay duoc gia tri cua input
+//2. khi nhan add thi se duoc add vao lists. phai co mot the de hien thi task, tao ra mot the li
+//3. add li vao lists, ben cnah do se co mot nut delete
+//4. delete cong viec
 
 function addTask() {
     // console.log(inputValue.value.length)

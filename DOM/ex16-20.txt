@@ -1,0 +1,9 @@
+1️⃣ Thay đổi nội dung: Viết một trang HTML có một <p> chứa nội dung bất kỳ. Khi bấm vào nút "Thay đổi", đoạn văn sẽ đổi sang một nội dung mới.
+
+2️⃣ Ẩn/Hiện phần tử: Tạo một nút bấm. Khi bấm vào nút, một đoạn văn bản sẽ hiển thị hoặc ẩn đi (toggle).
+
+3️⃣ Đếm số ký tự nhập vào: Tạo một ô nhập (<input>). Khi người dùng nhập vào, hiển thị số ký tự họ đã nhập.
+
+4️⃣ Tạo danh sách việc cần làm: Người dùng nhập một công việc vào ô nhập và bấm "Thêm". Công việc sẽ xuất hiện trong danh sách bên dưới.
+
+5️⃣ Đổi màu nền ngẫu nhiên: Khi bấm vào một nút, màu nền của trang sẽ thay đổi thành một màu ngẫu nhiên.
